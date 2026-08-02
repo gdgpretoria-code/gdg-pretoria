@@ -8,17 +8,17 @@ Scrum is built on empirical process control, which asserts that knowledge comes 
 
 ### Empirical Pillars
 
-* *Transparency:* Process and work must be visible to those performing and receiving the work.
-* *Inspection:* Artifacts and progress must be inspected frequently to detect variances.
-* *Adaptation:* If aspects deviate outside acceptable limits, the process or materials must be adjusted.
+* **Transparency:** Process and work must be visible to those performing and receiving the work.
+* **Inspection:** Artifacts and progress must be inspected frequently to detect variances.
+* **Adaptation:** If aspects deviate outside acceptable limits, the process or materials must be adjusted.
 
 ### Scrum Values
 
-* *Commitment:* Team members commit to achieving goals and supporting each other.
-* *Focus:* The primary focus is on the sprint work to make the best progress.
-* *Openness:* The team and stakeholders agree to be open about work and challenges.
-* *Respect:* Members respect each other to be capable, independent professionals.
-* *Courage:* Members have the courage to do the right thing and work through tough problem.
+* **Commitment:** Team members commit to achieving goals and supporting each other.
+* **Focus:** The primary focus is on the sprint work to make the best progress.
+* **Openness:** The team and stakeholders agree to be open about work and challenges.
+* **Respect:** Members respect each other to be capable, independent professionals.
+* **Courage:** Members have the courage to do the right thing and work through tough problem.
 
 ## 2. Advanced Role Dynamics
 
@@ -45,7 +45,7 @@ Scrum roles are structural responsibilities, not corporate job titles.
 
 ### The Scrum Master (SM)
 
-*Accountable for establishing Scrum as defined in the Scrum Guide.
+* Accountable for establishing Scrum as defined in the Scrum Guide.
 * Serves the team by clearing organizational impediments and shielding them from external interruptions.
 * Serves the PO by finding techniques for effective product goal definition.
 
@@ -84,9 +84,9 @@ Sprints are the heartbeat of Scrum, where ideas are turned into value. They are 
 
 ### Sprint Planning
 
-* The "Why":* The PO proposes how the product could increase its value in the current Sprint. The team collaborates to define a Sprint Goal.
-* *The "What":* Developers select items from the Product Backlog to include in the current Sprint.
-* *The "How":* Developers plan the specific work necessary to create an Increment that meets the Definition of Done.
+* **The "Why":** The PO proposes how the product could increase its value in the current Sprint. The team collaborates to define a Sprint Goal.
+* **The "What":** Developers select items from the Product Backlog to include in the current Sprint.
+* **The "How":** Developers plan the specific work necessary to create an Increment that meets the Definition of Done.
 
 ### Daily Scrum
 
@@ -120,16 +120,16 @@ Each Scrum artifact contains a specific commitment to ensure it provides informa
 └───────────────────┴──────────────────────────────────┘
 ```
 
-* *Product Goal:* Describes a future state of the product which can serve as a target for the Scrum team to plan against.
-* *Sprint Goal:* The single objective for the Sprint. It creates coherence and focus, encouraging the team to work together rather than on separate initiatives.
-* *Definition of Done (DoD):* A formal description of the state of the Increment when it meets the quality measures required for the product. No work can be considered part of an Increment unless it meets this standard.
+* **Product Goal:** Describes a future state of the product which can serve as a target for the Scrum team to plan against.
+* **Sprint Goal:** The single objective for the Sprint. It creates coherence and focus, encouraging the team to work together rather than on separate initiatives.
+* **Definition of Done (DoD):** A formal description of the state of the Increment when it meets the quality measures required for the product. No work can be considered part of an Increment unless it meets this standard.
 
 ## 5. Industry Mechanics (Beyond the Scrum Guide)
 
 While not strictly mandated by the core Scrum Guide, mature software teams universally implement these engineering mechanics to scale the framework:
 
-* *User Stories:* A standard format for backlog items: "As a [user type], I want [action] so that [benefit].
-* *"Story Points:* A relative unit of measure for sizing work effort, often using the Fibonacci sequence (1, 2, 3, 5, 8, 13).
-* *Backlog Refinement:* An ongoing activity where the PO and team break down, clarify, and estimate backlog items for future sprints.
-* *Velocity:* The average number of story points a team completes per sprint, used to forecast future capability.
-* *Burn-down / Burn-up Charts:* Visual graphs tracking remaining work versus time within a single sprint or across a release cycle.
+* **User Stories:** A standard format for backlog items: "As a [user type], I want [action] so that [benefit].
+* **"Story Points:** A relative unit of measure for sizing work effort, often using the Fibonacci sequence (1, 2, 3, 5, 8, 13).
+* **Backlog Refinement:** An ongoing activity where the PO and team break down, clarify, and estimate backlog items for future sprints.
+* **Velocity:** The average number of story points a team completes per sprint, used to forecast future capability.
+* **Burn-down / Burn-up Charts:** Visual graphs tracking remaining work versus time within a single sprint or across a release cycle.
