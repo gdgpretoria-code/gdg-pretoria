@@ -1,0 +1,38 @@
+<section class="spotlight" aria-labelledby="spotlight-heading">
+  <div class="spotlight-inner">
+    <header class="spotlight-header">
+      <h2 id="spotlight-heading">Community Spotlight</h2>
+      <p>People, projects, and the Pretoria developer community behind GDG.</p>
+    </header>
+
+    <div class="spotlight-grid">
+      <article class="member-card">
+        <div class="member-top">
+          <img class="member-avatar" [src]="member.avatar" [alt]="member.name" />
+          <div>
+            <p class="member-label">{{ member.role }}</p>
+            <h3>{{ member.name }}</h3>
+          </div>
+        </div>
+        <p class="member-quote">{{ member.quote }}</p>
+        <a routerLink="/member-portal" class="member-link">Meet more members</a>
+        <span class="member-mark" aria-hidden="true">
+          <span class="material-icons-outlined">groups</span>
+        </span>
+      </article>
+
+      <div class="stats">
+        <article class="stat-card stat-blue">
+          <p class="stat-value">2.5k+</p>
+          <p class="stat-label">Total Members</p>
+          <p class="stat-copy">Developers, designers, and students learning Google technologies together.</p>
+        </article>
+        <article class="stat-card stat-green">
+          <p class="stat-value">45</p>
+          <p class="stat-label">Events Hosted</p>
+          <p class="stat-copy">Talks, workshops, and hackathons delivered across Pretoria this year.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
