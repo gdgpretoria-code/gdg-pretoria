@@ -1,0 +1,28 @@
+<section class="sponsors" aria-labelledby="sponsors-heading">
+  <div class="sponsors-inner">
+    <h2 id="sponsors-heading" class="sponsors-heading">
+      <span class="heading-desktop">Global &amp; Local Partners</span>
+      <span class="heading-mobile">Our Global &amp; Local Partners</span>
+    </h2>
+
+    <div
+      class="sponsors-viewport"
+      [class.is-looping]="isMobile()"
+      [attr.aria-label]="isMobile() ? 'Partner logos, scrolling carousel' : 'Partner logos'"
+    >
+      <ul class="sponsors-row">
+        @for (sponsor of loopedSponsors; track $index) {
+          <li>
+            <div class="sponsor-card">
+              <img
+                [src]="sponsor.src"
+                [alt]="$index < sponsors.length ? sponsor.name : ''"
+                [attr.aria-hidden]="$index >= sponsors.length"
+              />
+            </div>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

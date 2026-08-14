@@ -1,0 +1,33 @@
+<section class="events" aria-labelledby="events-heading">
+  <div class="events-inner">
+    <header class="events-header">
+      <div>
+        <h2 id="events-heading">Upcoming Events</h2>
+        <p>Workshops, talks, and community meetups happening in Pretoria.</p>
+      </div>
+      <a routerLink="/events" class="explore-link">
+        Explore all events
+        <span class="material-icons-outlined" aria-hidden="true">chevron_right</span>
+      </a>
+    </header>
+
+    <div class="events-grid">
+      @for (event of events(); track event.id; let i = $index) {
+        <article class="event-card" [attr.data-accent]="accent(i)">
+          <div class="event-image">
+            <img [src]="event.image" [alt]="event.title" />
+            <span class="event-tag">{{ event.category }}</span>
+          </div>
+          <div class="event-body">
+            <p class="event-meta">{{ meta(event) }}</p>
+            <h3>{{ event.title }}</h3>
+            <p class="event-desc">{{ event.description }}</p>
+          </div>
+          <button type="button" class="event-cta" (click)="rsvp(event)">
+            RSVP Now
+          </button>
+        </article>
+      }
+    </div>
+  </div>
+</section>

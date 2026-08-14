@@ -1,0 +1,115 @@
+<header class="navbar" [class.is-open]="menuOpen()">
+  <div class="navbar-inner">
+    <div class="navbar-left">
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        [class.is-open]="menuOpen()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-nav"
+        [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+        (click)="toggleMenu()"
+      >
+        <span class="menu-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <a routerLink="/" class="brand" (click)="closeOverlays()">
+        <img
+          class="brand-logo"
+          src="assets/logos/gdg-pretoria-lockup.png"
+          alt="GDG Pretoria"
+        />
+      </a>
+    </div>
+
+    <nav class="nav-links" aria-label="Primary">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+        >{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="navbar-right">
+      <button
+        type="button"
+        class="icon-btn search-btn"
+        [attr.aria-expanded]="searchOpen()"
+        aria-label="Search"
+        (click)="toggleSearch()"
+      >
+        <span class="material-icons-outlined">search</span>
+      </button>
+
+      <a
+        class="avatar-link"
+        routerLink="/member-portal"
+        [attr.aria-label]="authService.currentUser() ? 'Open profile' : 'Sign in'"
+        (click)="closeOverlays()"
+      >
+        @if (authService.currentUser()?.avatarUrl) {
+          <img class="avatar" [src]="authService.currentUser()?.avatarUrl" alt="" />
+        } @else {
+          <span class="avatar avatar-fallback">
+            <span class="material-icons-outlined">account_circle</span>
+          </span>
+        }
+      </a>
+    </div>
+  </div>
+
+  @if (searchOpen()) {
+    <form class="search-bar" (submit)="submitSearch($event)">
+      <span class="material-icons-outlined" aria-hidden="true">search</span>
+      <input
+        type="search"
+        name="q"
+        placeholder="Search events, speakers, resources..."
+        [value]="searchQuery()"
+        (input)="searchQuery.set($any($event.target).value)"
+        aria-label="Search the site"
+        autofocus
+      />
+      <button type="button" class="icon-btn" aria-label="Close search" (click)="toggleSearch()">
+        <span class="material-icons-outlined">close</span>
+      </button>
+    </form>
+  }
+
+  <div
+    id="mobile-nav"
+    class="mobile-drawer"
+    [class.open]="menuOpen()"
+    [attr.aria-hidden]="!menuOpen()"
+  >
+    <nav class="mobile-links" aria-label="Mobile">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+          (click)="closeOverlays()"
+        >{{ link.label }}</a>
+      }
+      <a class="mobile-search-link" routerLink="/resources" (click)="closeOverlays()">
+        <span class="material-icons-outlined">search</span>
+        Search
+      </a>
+    </nav>
+  </div>
+
+  <button
+    type="button"
+    class="nav-backdrop"
+    [class.visible]="menuOpen()"
+    tabindex="-1"
+    aria-hidden="true"
+    (click)="closeOverlays()"
+  ></button>
+</header>
